@@ -1,0 +1,54 @@
+\documentclass[12pt, a4paper]{report}
+
+% --- PAKIETY ---
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+% --- KONFIGURACJA NAGŁÓWKÓW ---
+\pagestyle{fancy}
+\fancyhf{}
+\newcommand{\myAuthor}{John Pork} % <--- ZMIEŃ SWOJE IMIĘ
+
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\myAuthor}
+\fancyfoot[C]{\thepage}
+
+% --- DANE DOKUMENTU ---
+\title{Zadanie2}
+\author{Kacper Dabrowski}
+\date{2025.12.12}
+
+\begin{document}
+
+% Strona tytułowa
+\maketitle
+
+% Streszczenie (ładowane z pliku)
+\begin{abstract}
+    \input{abstract}
+\end{abstract}
+
+% Spis treści
+\tableofcontents
+
+% Ładowanie rozdziałów
+\input{chapter1}
+\input{chapter2}
+\input{chapter3}
+
+% Bibliografia (zostawiam w głównym dla wygody, ale też można wydzielić)
+\begin{thebibliography}{9}
+    \bibitem{smith2023}
+    Smith, J., \textit{The Future of AI}, Tech Press, New York, 2023.
+    
+    \bibitem{progit}
+    strona do nauki \textit{Pro Git} link do strony: \url{https://myszka.kmim.wm.pwr.edu.pl/latex/}
+\end{thebibliography}
+
+\end{document}
